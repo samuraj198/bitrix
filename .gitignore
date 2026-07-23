@@ -1,0 +1,26 @@
+# Среда разработки и ОС
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Полное исключение ядра Битрикс
+/bitrix/*
+# Исключение для локального композита
+/bitrix/html_pages/
+
+# Пользовательские загрузки и бэкапы
+/upload/
+/logs/
+*.log
+*.sql
+*.tar.gz
+
+# Системные файлы в корне (по желанию)
+/robots.txt
+/sitemap*.xml
+
+# Исключения внутри папки local (кэш компонентов)
+/local/cache/
+/local/managed_cache/
+/local/stack_cache/
