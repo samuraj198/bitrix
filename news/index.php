@@ -4,9 +4,18 @@ $APPLICATION->SetPageProperty("tags", "news, новости");
 $APPLICATION->SetPageProperty("title", "Наши новости");
 $APPLICATION->SetTitle("Новости");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:news", 
-	".default", 
-	[
+	"bitrix:search.form",
+	"",
+	Array(
+		"PAGE" => "#SITE_DIR#news/results.php",
+		"USE_SUGGEST" => "N"
+	)
+);?><br>
+ <br>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news",
+	".default",
+	Array(
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -21,20 +30,15 @@ $APPLICATION->SetTitle("Новости");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
-		"DETAIL_FIELD_CODE" => [
-			0 => "",
-			1 => "",
-		],
+		"DETAIL_FIELD_CODE" => [0=>"",1=>"",],
 		"DETAIL_PAGER_SHOW_ALL" => "Y",
 		"DETAIL_PAGER_TEMPLATE" => "arrows",
 		"DETAIL_PAGER_TITLE" => "Страница",
-		"DETAIL_PROPERTY_CODE" => [
-			0 => "",
-			1 => "",
-		],
+		"DETAIL_PROPERTY_CODE" => [0=>"",1=>"",],
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -48,14 +52,8 @@ $APPLICATION->SetTitle("Новости");
 		"IBLOCK_TYPE" => "news",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"LIST_FIELD_CODE" => [
-			0 => "",
-			1 => "",
-		],
-		"LIST_PROPERTY_CODE" => [
-			0 => "",
-			1 => "",
-		],
+		"LIST_FIELD_CODE" => [0=>"",1=>"",],
+		"LIST_PROPERTY_CODE" => [0=>"",1=>"",],
 		"LIST_USE_SHARE" => "",
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
@@ -73,6 +71,7 @@ $APPLICATION->SetTitle("Новости");
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_FOLDER" => "/news/",
 		"SEF_MODE" => "Y",
+		"SEF_URL_TEMPLATES" => ["news"=>"","section"=>"","detail"=>"#ELEMENT_CODE#/","rss"=>"rss/","rss_section"=>"#SECTION_ID#/rss/",],
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "Y",
@@ -92,15 +91,6 @@ $APPLICATION->SetTitle("Новости");
 		"USE_RSS" => "Y",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"YANDEX" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
-		"SEF_URL_TEMPLATES" => [
-			"news" => "",
-			"section" => "",
-			"detail" => "#ELEMENT_CODE#/",
-			"rss" => "rss/",
-			"rss_section" => "#SECTION_ID#/rss/",
-		]
-	],
-	false
+		"YANDEX" => "N"
+	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

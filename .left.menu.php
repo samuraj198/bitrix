@@ -30,7 +30,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Новости", 
-		"/novosti.php", 
+		"/news", 
 		Array(), 
 		Array(), 
 		"" 
@@ -62,6 +62,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Фото", 
+		"/photo/", 
+		Array(), 
+		Array(), 
+		"CSite::InGroup(array(1,3,6,4,7,5,8))" 
 	)
 );
 ?>

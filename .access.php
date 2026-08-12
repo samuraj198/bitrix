@@ -1,4 +1,6 @@
 <?
+$PERM["photo"]["2"]="D";
+$PERM["photo"]["*"]="R";
 $PERM["personal"]["8"]="W";
 $PERM["catalog"]["8"]="W";
 $PERM["news"]["8"]="W";
