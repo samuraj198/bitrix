@@ -69,6 +69,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"CSite::InGroup(array(1,3,6,4,7,5,8))" 
+	),
+	Array(
+		"Мой компонент", 
+		"/moy-komponent.php", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
