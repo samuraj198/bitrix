@@ -1,0 +1,53 @@
+.container-yandex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-yandex-error {
+    color: red;
+}
+
+.container-yandex-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-button {
+    background-color: rgb(99, 170, 40);
+    color: white;
+    border: none;
+    transition: all 250ms ease;
+    padding: 3px 6px;
+}
+
+.form-button:hover {
+    background-color: rgb(91, 159, 11);
+    transition: all 250ms ease;
+}
+
+.container-yandex-files-ul,
+.container-yandex-errors-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-yandex-files-ul-li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container-yandex-errors-ul-li {
+    color: red;
+}
+
+.container-yandex-files-ul-li-name {
+    font-size: 16px;
+}

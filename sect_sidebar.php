@@ -37,6 +37,20 @@ endif;
 ?>
 
 <div class="mb-5">
+	<?$APPLICATION->IncludeComponent(
+		"bitrix:main.include",
+		"",
+		Array(
+			"AREA_FILE_SHOW" => "file",
+			"PATH" => SITE_DIR."include/yandex.php",
+			"AREA_FILE_RECURSIVE" => "N",
+			"EDIT_MODE" => "html",
+		),
+		false,
+		Array('HIDE_ICONS' => 'N')
+	);?>
+</div>
+<div class="mb-5">
 	<h3>Мы в соцсетях</h3>
 	<?$APPLICATION->IncludeComponent(
 		"bitrix:main.include",
